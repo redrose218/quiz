@@ -29,6 +29,17 @@ build/
 .gradle
 local.properties
 *.iml
+debug/
+release/
+*.bundle*
+assets_*
+node_modules_*
+
+# Eclipse
+bin/
+.classpath
+.project
+.settings
 
 # node.js
 #
