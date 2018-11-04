@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, FlatList, Image, Text, View } from 'react-native';
+import { Button, FlatList, Text, View } from 'react-native';
 import { connect } from 'react-redux';
+import TimerMachine from 'react-timer-machine'
 import { getQuestions } from '@actions/api';
 import { setQuestions } from '@actions/global';
 import { QuestionItem } from '@components';
-import Constants from '@src/constants';
 import Utils from '@src/utils';
 import styles from './styles';
 
@@ -17,6 +17,7 @@ class HomeScreen extends React.PureComponent {
       data: [],
       answers: {},
       score: null,
+      timeElapsed: 0,
       testing: false
     };
   }
@@ -58,7 +59,7 @@ class HomeScreen extends React.PureComponent {
   }
 
   render() {
-    const { data, answers, score, testing } = this.state;
+    const { data, answers, score, timeElapsed, testing } = this.state;
     return (
       <View style={styles.container}>
         <View style={{ flex: 1 }}>
@@ -78,14 +79,27 @@ class HomeScreen extends React.PureComponent {
             (score || score == 0) ?
               <View style={styles.scoreContainer}>
                 <Text style={styles.score}>{`Total Score: ${score}`}</Text>
+                <Text style={styles.score}>{`Time Ellapsed: ${timeElapsed}s`}</Text>
               </View>
               :
-              null
+              <View style={styles.scoreContainer}>
+                <Text style={styles.score}>Welcome!</Text>
+              </View>
           }
         </View>
         <Button
-          title={testing ? 'Complete' : 'Start Quiz'}
+          title={testing ? 'Complete' : (score || score == 0) ? 'Play Again' : 'Start Quiz'}
           onPress={() => testing ? this.onStop() : this.onStart()}
+        />
+        <TimerMachine
+          timeStart={1000}
+          started={testing}
+          countdown={false}
+          interval={1000}
+          formatTimer={(time, ms) => {
+            if(__DEV__) console.log(time, ms);
+            this.setState({ timeElapsed: ms / 1000 });
+          }}
         />
       </View>
     );

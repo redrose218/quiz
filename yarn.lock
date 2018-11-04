@@ -4273,6 +4273,16 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moment-duration-format@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/moment-duration-format/-/moment-duration-format-2.2.2.tgz#b957612de26016c9ad9eb6087c054573e5127779"
+  integrity sha1-uVdhLeJgFsmtnrYIfAVFc+USd3k=
+
+moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
+
 morgan@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
@@ -5040,11 +5050,6 @@ react-native-tab-view@^1.0.0:
   dependencies:
     prop-types "^15.6.1"
 
-react-native-timer-countdown@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/react-native-timer-countdown/-/react-native-timer-countdown-2.0.3.tgz#84866bf2dc0cdcec27d148290a8fd8977004d5ef"
-  integrity sha512-sM3lGMCoY25ALaz/kaDbOrNtpyGXdkU3IBTxVE4iu3fYeXJU6R9OltNZKhKvst7MS4/2wPDC/AWMeq+eHPEKrw==
-
 react-native@0.57.4:
   version "0.57.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.57.4.tgz#cb7ba78e8be420737868fa9a97caa897a534c893"
@@ -5180,6 +5185,11 @@ react-test-renderer@16.6.0-alpha.8af6728:
     prop-types "^15.6.2"
     react-is "^16.6.0-alpha.8af6728"
     scheduler "^0.10.0-alpha.8af6728"
+
+react-timer-machine@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-timer-machine/-/react-timer-machine-1.0.1.tgz#d0866babefde3d9844a416c2f32cde37ad1abe98"
+  integrity sha1-0IZrq+/ePZhEpBbC8yzeN60avpg=
 
 react-timer-mixin@^0.13.2:
   version "0.13.4"
