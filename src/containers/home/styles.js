@@ -5,4 +5,12 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: 'white'
   },
+  scoreContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  score: {
+    fontSize: 30
+  }
 });
